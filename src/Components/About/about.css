@@ -1,4 +1,88 @@
 #about {
-    background-color: #e2e2e2;
-    border-radius: 10px;
+  background-color: #e2e2e2;
+  border-radius: 10px;
+}
+/* about.css */
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  /* background: url('../assets/elearning-bg.jpg') no-repeat center center;  */
+  background-size: cover;
+  color: #333;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.image-container {
+  flex: 1;
+  min-height: 300px;
+  background: url('../../Assests/slot.mp4') no-repeat center center; 
+  background-size: cover;
+  margin-right: 20px;
+}
+
+.text-container {
+  flex: 1;
+  text-align: right;
+}
+
+.text-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.text-container p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
   }
+
+  .image-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+    min-height: 200px; /* Adjust as needed */
+  }
+
+  .text-container {
+    text-align: center;
+  }
+
+  .text-container h1 {
+    font-size: 2rem;
+  }
+
+  .text-container p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .text-container p {
+    font-size: 0.8rem;
+  }
+
+  .about-section {
+    padding: 20px;
+  }
+}
+

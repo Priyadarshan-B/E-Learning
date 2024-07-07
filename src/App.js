@@ -22,6 +22,7 @@ const App = () => {
 
   return (
     <div className="App">
+      
       <header className="navbar">
         <nav>
           <ul>
@@ -33,12 +34,12 @@ const App = () => {
           </ul>
         </nav>
       </header>
-      <main>
-        <Home ref={sectionRefs.home} />
-        <About ref={sectionRefs.about} />
-        <Course ref={sectionRefs.course} />
-        <Slot ref={sectionRefs.slot} />
-        <Contact ref={sectionRefs.contact} />
+      <main className='total-background'>
+        <Home ref={sectionRefs.home} /><br/>
+        <About ref={sectionRefs.about} /><br/>
+        <Course ref={sectionRefs.course} /><br/>
+        <Slot ref={sectionRefs.slot} /><br/>
+        <Contact ref={sectionRefs.contact} /><br/>
       </main>
     </div>
   );

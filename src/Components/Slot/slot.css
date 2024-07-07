@@ -1,5 +1,19 @@
 #slot{
-    background-color: antiquewhite;
+    /* background-color: rgb(197, 197, 197); */
     border-radius: 10px;
 
+}
+.total-slot{
+    display: flex;
+    flex-direction: row;
+    gap: 85px;
+}
+.slot-content{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+.slot-video{
+    border-radius: 60%;
+    width: 400px;
 }

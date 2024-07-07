@@ -1,6 +1,6 @@
 #courses {
     padding: 60px 20px;
-    background-color: #d1d1d1;
+    /* background-color: #a8d9db; */
     text-align: center;
     border-radius: 10px;
   }
@@ -19,8 +19,8 @@
   
   .course-box {
     position: relative;
-    width: 350px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     overflow: hidden;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.2s;
@@ -45,7 +45,7 @@
     left: 0;
     width: 100%;
     padding: 10px;
-    background: rgba(1, 46, 113, 0.7);
+    background: #5e9ea0;
     color: white;
     text-align: center;
     font-size: 1.5em;
@@ -60,7 +60,7 @@
   .view-more{
     border: none;
     font-size: 20px;
-    background-color: rgba(1, 46, 113, 0.7);
+    background-color: #008081;
     color: white;
     padding: 10px;
     border-radius: 5px;

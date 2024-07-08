@@ -1,5 +1,4 @@
 #slot{
-    /* background-color: rgb(197, 197, 197); */
     border-radius: 10px;
 
 }
@@ -7,6 +6,10 @@
     display: flex;
     flex-direction: row;
     gap: 85px;
+    /* background-color: white; */
+    border-radius: 10px;
+
+
 }
 .slot-content{
     display: flex;
@@ -16,4 +19,16 @@
 .slot-video{
     border-radius: 60%;
     width: 400px;
+}
+
+.round{
+    background-color: white;
+        border-radius: 50%;
+    
+}
+
+@media(max-width:768px){
+    .slot-video{
+        display: none;
+    }
 }

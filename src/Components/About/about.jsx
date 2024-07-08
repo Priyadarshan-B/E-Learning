@@ -4,8 +4,8 @@ import about from '../../Assests/slot.mp4'
 
 const About = React.forwardRef((props, ref) => (
   <section ref={ref} id="about" className="about-section" data-aos="fade-up">
-    <div className="about-content">
-    <video autoPlay muted loop className="slot-video">
+    <div className="about-content" data-aos="fade-up">
+    <video autoPlay muted loop className="slot-video" data-aos="fade-right">
           <source src={about} type="video/mp4" />
           Your browser does not support the video tag.
         </video>   

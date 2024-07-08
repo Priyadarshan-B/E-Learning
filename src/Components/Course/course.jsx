@@ -14,7 +14,7 @@ const Course = React.forwardRef((props, ref) => (
     <section ref={ref} id="courses" data-aos="fade-up">
     <h1>Our Courses</h1>
     <div className='total-course'>
-        <div className="courses-container">
+        <div className="courses-container" data-aos = "fade-left">
           {courseData.map((course) => (
             <div key={course.id} className="course-box">
               <img src={course.image} alt={course.name} className="course-image" />

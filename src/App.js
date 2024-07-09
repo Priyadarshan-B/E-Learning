@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './App.css';
 
 import Home from './Components/Home/home';
@@ -6,6 +6,7 @@ import About from './Components/About/about';
 import Contact from './Components/Contact/contact';
 import Course from './Components/Course/course';
 import Slot from './Components/Slot/slot';
+// import LandingPage from './Components/landingpage';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import google from './Assests/google.png';
 
@@ -20,6 +21,7 @@ const App = () => {
 
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [navbarTransparent, setNavbarTransparent] = useState(true);
 
   const handleScroll = (section) => {
     sectionRefs[section].current.scrollIntoView({ behavior: 'smooth' });
@@ -38,9 +40,23 @@ const App = () => {
     setIsModalOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const homeHeight = sectionRefs.home.current.getBoundingClientRect().height;
+      if (window.scrollY > homeHeight) {
+        setNavbarTransparent(false);
+      } else {
+        setNavbarTransparent(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [sectionRefs.home]);
+
   return (
     <div className="App">
-      <header className="navbar">
+      <header className={`navbar ${navbarTransparent ? 'transparent' : 'solid'}`}>
         <nav>
           <div className="hamburger-icon" onClick={toggleNav}>
             <i className="fas fa-bars"></i>
@@ -69,9 +85,9 @@ const App = () => {
       )}
       <main className='total-background'>
         <Home ref={sectionRefs.home} /><br/>
-        <About ref={sectionRefs.about} /><br/>
-        <Course ref={sectionRefs.course} /><br/>
-        <Slot ref={sectionRefs.slot} /><br/>
+        <About ref={sectionRefs.about} /><br/><hr></hr><br/>
+        <Course ref={sectionRefs.course} /><br/><br/>
+        <Slot ref={sectionRefs.slot} /><br/> <hr></hr><br/>
         <Contact ref={sectionRefs.contact} /><br/>
       </main>
       <div className="area">
@@ -86,6 +102,12 @@ const App = () => {
           <li></li>
           <li></li>
           <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+
         </ul>
       </div>
     </div>

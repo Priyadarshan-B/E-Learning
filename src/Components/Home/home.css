@@ -10,25 +10,52 @@
     border-radius: 10px;
   }
   
+
   
   
   .content {
-    position: relative;
-    z-index: 1;
+    position: flex;
+    z-index: 3;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(0, 0, 0, 0.5); */
     border-radius: 10px;
+
   }
   
-  h1 {
-    font-size: 3em;
+  .home-h1 {
+    font-size: 3.5rem;
     margin-bottom: 20px;
+    color: rgb(2, 155, 125);
   }
   
-  p {
-    font-size: 1.5em;
+  .home-p {
+    font-size: 1.5rem;
     line-height: 1.6;
+    color: black;
   }
+
+ 
+
+/* Combine animations for the video container */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  animation: floating 1s infinite ease-in-out, enlarge 12s infinite ease-in-out ;
+}
+
+.home-video {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  animation: shake 3s infinite ease-in-out;
+}
+
   
   @media (max-width: 768px) {
     h1 {

@@ -1,12 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './App.css';
-
 import Home from './Components/Home/home';
 import About from './Components/About/about';
 import Contact from './Components/Contact/contact';
 import Course from './Components/Course/course';
 import Slot from './Components/Slot/slot';
-// import LandingPage from './Components/landingpage';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import google from './Assests/google.png';
 
@@ -42,8 +40,7 @@ const App = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const homeHeight = sectionRefs.home.current.getBoundingClientRect().height;
-      if (window.scrollY > homeHeight) {
+      if (window.scrollY > 100) { 
         setNavbarTransparent(false);
       } else {
         setNavbarTransparent(true);
@@ -52,13 +49,15 @@ const App = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [sectionRefs.home]);
+  }, []);
 
   return (
     <div className="App">
       <header className={`navbar ${navbarTransparent ? 'transparent' : 'solid'}`}>
         <nav>
-          <div className="hamburger-icon" onClick={toggleNav}>
+          <div 
+            className={`hamburger-icon ${navbarTransparent ? 'icon-transparent' : 'icon-solid'}`}
+            onClick={toggleNav}>
             <i className="fas fa-bars"></i>
           </div>
           <ul className={isNavOpen ? 'nav-open' : ''}>
@@ -68,7 +67,9 @@ const App = () => {
             <li onClick={() => handleScroll('slot')}>Book Slot</li>
             <li onClick={() => handleScroll('contact')}>Contact</li>
           </ul>
-          <button className="sign-in-button" onClick={openModal}>Sign In</button>
+          <button 
+            className={`sign-in-button ${navbarTransparent ? 'icon-transparent' : 'icon-solid'}`}
+           onClick={openModal}>Sign In</button>
         </nav>
       </header>
       {isModalOpen && (
@@ -88,8 +89,9 @@ const App = () => {
         <About ref={sectionRefs.about} /><br/><hr></hr><br/>
         <Course ref={sectionRefs.course} /><br/><br/>
         <Slot ref={sectionRefs.slot} /><br/> <hr></hr><br/>
-        <Contact ref={sectionRefs.contact} /><br/>
       </main>
+      <Contact ref={sectionRefs.contact} /><br/>
+
       <div className="area">
         <ul className="circles">
           <li></li>
@@ -107,8 +109,8 @@ const App = () => {
           <li></li>
           <li></li>
           <li></li>
-
-        </ul>
+          <li></li>
+          </ul>
       </div>
     </div>
   );

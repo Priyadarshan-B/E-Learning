@@ -1,29 +1,33 @@
 import React from 'react';
 import './course.css'
-import course from '../../Assests/course1.jpeg'
+import course from '../../Assests/c.jpeg'
 
 const courseData = [
-    { id: 1, name: 'Course 1', image: course },
-    { id: 2, name: 'Course 2', image: course },
-    { id: 3, name: 'Course 3', image: course },
-    { id: 4, name: 'Course 4', image: course },
-    { id: 5, name: 'Course 5', image: course },
-    { id: 6, name: 'Course 6', image: course },
+    { id: 1, name: 'Course 1', image: course, description:'learn c language for free' },
+    { id: 2, name: 'Course 2', image: course, description:'learn c language for free' },
+    { id: 3, name: 'Course 3', image: course, description:'learn c language for free' },
+    { id: 4, name: 'Course 4', image: course, description:'learn c language for free' },
+    { id: 5, name: 'Course 5', image: course, description:'learn c language for free' },
+    { id: 6, name: 'Course 6', image: course, description:'learn c language for free' },
   ];
 const Course = React.forwardRef((props, ref) => (
     <section ref={ref} id="courses" data-aos="fade-up">
     <h1>Our Courses</h1>
     <div className='total-course'>
-        <div className="courses-container" data-aos = "fade-left">
+        <div className="courses-container" >
           {courseData.map((course) => (
-            <div key={course.id} className="course-box">
+            <div key={course.id} className="course-box" data-aos = "flip-right" data-aos-delay="0">
+              {/* <div class="ribbon1">Your text content</div> */}
               <img src={course.image} alt={course.name} className="course-image" />
-              <div className="course-name">{course.name}</div>
+              <div className='course-info'data-aos = "fade-right" data-aos-duration= "5000"data-aos-delay="200">
+                <div className="course-name" >{course.name}</div>
+                <div className='course-description'>{course.description}</div>
+              </div>
             </div>
           ))}
         </div>
         <div>
-            <button className='view-more'>
+            <button className='view-more'data-aos="zoom-out">
             View More..
             </button>
         </div>

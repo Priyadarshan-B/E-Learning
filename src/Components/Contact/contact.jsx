@@ -3,7 +3,7 @@ import './contact.css';
 import { Email, Phone } from '@mui/icons-material';
 
 const Contact = React.forwardRef((props, ref) => (
-  <section ref={ref} id="contact"  data-aos="zoom-in">
+  <section ref={ref} id="contact" data-aos="zoom-in">
 
     <div className="footer" >
       <div className="footer-content">

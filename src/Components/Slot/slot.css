@@ -1,5 +1,6 @@
 #slot{
     border-radius: 10px;
+    padding: 10px;
 }
 
 .slot-p{
@@ -19,24 +20,21 @@
 .slot-content{
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
+    /* padding-left: 20px; */
 }
 .slot-video{
     border-radius: 60%;
-    width: 400px;
-    animation: shake 4s infinite ease-in-out , floating 15s infinite ease-in-out;
-    /* z-index: 2; */
+    z-index: -2;
 }
 
-.round{
-    position: relative;
-    /* background-color: white; */
-        border-radius: 50%;
-    
-}
+
 
 @media(max-width:768px){
     .slot-video{
         display: none;
+    }
+    .total-slot{
+        text-align: center;
+        gap: 0px;
     }
 }

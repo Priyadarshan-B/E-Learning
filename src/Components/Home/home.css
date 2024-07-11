@@ -1,15 +1,23 @@
 #home {
-    position: relative;
     height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     color: white;
     text-align: center;
-    border-radius: 10px;
   }
+ 
   
+  .total-home{
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    padding: 80px;
+    box-sizing: border-box;
+    /* width: 100%; */
+
+  }
 
   
   
@@ -17,8 +25,8 @@
     position: flex;
     z-index: 3;
     padding: 20px;
-    /* background: rgba(0, 0, 0, 0.5); */
     border-radius: 10px;
+    flex: 2;
 
   }
   
@@ -36,34 +44,43 @@
 
  
 
-/* Combine animations for the video container */
 .video-container {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  animation: floating 1s infinite ease-in-out, enlarge 12s infinite ease-in-out ;
+  width: 70%;
+  flex: 1;
+
+  animation: floating 4s infinite ease-in-out, enlarge 5s infinite linear ;
 }
 
 .home-video {
   width: 100%;
   height: auto;
-  border-radius: 50%;
-  overflow: hidden;
-  animation: shake 3s infinite ease-in-out;
+  clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);  /* mix-blend-mode:darken; */
+
 }
 
   
   @media (max-width: 768px) {
-    h1 {
-      font-size: 2em;
+    .home-h1 {
+      font-size: 3em;
+    }
+    .total-home{
+      padding: 10px;
     }
   
-    p {
-      font-size: 1.2em;
+    .home-p {
+      font-size: 2em;
     }
+    .video-container{
+      display: none;
+    }
+    #home{
+      height: 50vh;
+      position: relative;
+    }
+    
   }
   

@@ -11,7 +11,7 @@ const Contact = React.forwardRef((props, ref) => (
         <div className="contact-info">
           <div className="contact-item" data-aos="fade-down">
             <Email className="icon" />
-            <a href="mailto:example@example.com">example@example.com</a>
+            <a href="mailto:example@example.com">sample@sample.com</a>
           </div>
           <div className="contact-item" data-aos="fade-down">
             <Phone className="icon" />

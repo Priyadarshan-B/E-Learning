@@ -3,17 +3,17 @@ import './contact.css';
 import { Email, Phone } from '@mui/icons-material';
 
 const Contact = React.forwardRef((props, ref) => (
-  <section ref={ref} id="contact" data-aos="zoom-in">
+  <section ref={ref} id="contact">
 
     <div className="footer" >
       <div className="footer-content">
-        <h2>Contact Us</h2>
+        <h2 data-aos="fade-up">Contact Us</h2>
         <div className="contact-info">
-          <div className="contact-item">
+          <div className="contact-item" data-aos="fade-down">
             <Email className="icon" />
             <a href="mailto:example@example.com">example@example.com</a>
           </div>
-          <div className="contact-item">
+          <div className="contact-item" data-aos="fade-down">
             <Phone className="icon" />
             <a href="tel:+1234567890">+1 234 567 890</a>
           </div>

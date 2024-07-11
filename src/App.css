@@ -62,7 +62,7 @@ body {
 
 .area {
   background: rgba(76, 165, 155, 0.084); 
-  background: -webkit-linear-gradient(to left, rgba(143, 148, 251, 0.5), rgba(78, 84, 200, 0.5)); /* Low brightness */
+  /* background: -webkit-linear-gradient(to left, rgba(143, 251, 240, 0.5), rgba(78, 200, 180, 0.5)); */
   width: 100vw;
   height: 100vh;
   position: fixed;

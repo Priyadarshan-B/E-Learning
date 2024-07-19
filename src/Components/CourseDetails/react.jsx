@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import './courseDetails.css';
 import { useNavigate } from "react-router-dom";
 import react from '../../Assests/react.jpg';
